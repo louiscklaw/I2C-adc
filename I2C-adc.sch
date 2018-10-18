@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:I2C-adc-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -171,7 +172,7 @@ L Device:Ferrite_Bead_Small FB1
 U 1 1 5BC8F4AE
 P 2500 3050
 F 0 "FB1" V 2250 3050 50  0000 C CNN
-F 1 "Ferrite_Bead_Small" V 2350 3050 50  0000 C CNN
+F 1 "MMZ2012Y152B" V 2350 3050 50  0000 C CNN
 F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2430 3050 50  0001 C CNN
 F 3 "~" H 2500 3050 50  0001 C CNN
 	1    2500 3050
@@ -180,20 +181,20 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x10 J1
 U 1 1 5BC8F7D9
-P 1650 3750
-F 0 "J1" H 1550 3000 50  0000 C CNN
-F 1 "Conn_01x10" H 1550 3100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 1650 3750 50  0001 C CNN
-F 3 "~" H 1650 3750 50  0001 C CNN
-	1    1650 3750
-	-1   0    0    1   
+P 1650 3650
+F 0 "J1" H 1550 2900 50  0000 C CNN
+F 1 "Conn_01x10" H 1550 3000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 1650 3650 50  0001 C CNN
+F 3 "~" H 1650 3650 50  0001 C CNN
+	1    1650 3650
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:Ferrite_Bead_Small FB2
 U 1 1 5BC8FD9F
 P 2500 3350
 F 0 "FB2" V 2650 3350 50  0000 C CNN
-F 1 "Ferrite_Bead_Small" V 2750 3350 50  0000 C CNN
+F 1 "MMZ2012Y152B" V 2750 3350 50  0000 C CNN
 F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2430 3350 50  0001 C CNN
 F 3 "~" H 2500 3350 50  0001 C CNN
 	1    2500 3350
@@ -231,13 +232,13 @@ Connection ~ 2250 3050
 $Comp
 L power:VDD #PWR0109
 U 1 1 5BC90C2E
-P 2750 2950
-F 0 "#PWR0109" H 2750 2800 50  0001 C CNN
-F 1 "VDD" H 2800 3150 50  0000 C CNN
-F 2 "" H 2750 2950 50  0001 C CNN
-F 3 "" H 2750 2950 50  0001 C CNN
-	1    2750 2950
-	1    0    0    -1  
+P 2750 3400
+F 0 "#PWR0109" H 2750 3250 50  0001 C CNN
+F 1 "VDD" H 2800 3600 50  0000 C CNN
+F 2 "" H 2750 3400 50  0001 C CNN
+F 3 "" H 2750 3400 50  0001 C CNN
+	1    2750 3400
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2750 2950 2750 3050
@@ -246,42 +247,42 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0110
 U 1 1 5BC90FE8
-P 2750 3400
-F 0 "#PWR0110" H 2750 3150 50  0001 C CNN
-F 1 "GND" H 2800 3200 50  0000 C CNN
-F 2 "" H 2750 3400 50  0001 C CNN
-F 3 "" H 2750 3400 50  0001 C CNN
-	1    2750 3400
-	1    0    0    -1  
+P 2750 2950
+F 0 "#PWR0110" H 2750 2700 50  0001 C CNN
+F 1 "GND" H 2800 2750 50  0000 C CNN
+F 2 "" H 2750 2950 50  0001 C CNN
+F 3 "" H 2750 2950 50  0001 C CNN
+	1    2750 2950
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2600 3350 2750 3350
 Wire Wire Line
 	2750 3350 2750 3400
-Text Label 2250 3450 2    50   ~ 0
+Text Label 2250 3550 2    50   ~ 0
 SCL
 Wire Wire Line
-	2250 3450 1850 3450
-Text Label 2250 3550 2    50   ~ 0
+	2250 3550 1850 3550
+Text Label 2250 3450 2    50   ~ 0
 SDA
 Wire Wire Line
-	2250 3550 1850 3550
-Text Label 2250 3650 2    50   ~ 0
+	2250 3450 1850 3450
+Text Label 2250 3750 2    50   ~ 0
 ADDR
 Wire Wire Line
-	2250 3650 1850 3650
-Text Label 2250 3750 2    50   ~ 0
+	2250 3750 1850 3750
+Text Label 2250 3650 2    50   ~ 0
 ALERT
 Wire Wire Line
-	1850 3750 2250 3750
-Text Label 2250 4150 2    50   ~ 0
+	1850 3650 2250 3650
+Text Label 2250 4050 2    50   ~ 0
 AIN3
 Wire Wire Line
-	2250 4150 1850 4150
-Text Label 2250 4050 2    50   ~ 0
+	2250 4050 1850 4050
+Text Label 2250 4150 2    50   ~ 0
 AIN2
 Wire Wire Line
-	2250 4050 1850 4050
+	2250 4150 1850 4150
 Text Label 2250 3950 2    50   ~ 0
 AIN1
 Wire Wire Line
@@ -306,4 +307,12 @@ Text Label 6550 3600 2    50   ~ 0
 AIN3
 Wire Wire Line
 	6550 3600 6000 3600
+Text Label 4750 3300 0    50   ~ 0
+SCL
+Text Label 4750 3400 0    50   ~ 0
+SDA
+Text Label 4750 3500 0    50   ~ 0
+ADDR
+Text Label 4750 3600 0    50   ~ 0
+ALERT
 $EndSCHEMATC
